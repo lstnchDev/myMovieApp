@@ -1,0 +1,17 @@
+<div class="popup-container">
+  <img class="movie-image" src="images/movies/{{data.id}}.jpeg" > 
+  <div mat-dialog-content class="popup-content">
+    <h2>{{data.name}}</h2>
+    <div class="genres-container">
+      <span class="genre" *ngFor="let idGenre of data.genre let isLast = last">{{genres[idGenre-1]}}{{isLast ? " " : ", "}}</span>
+    </div>
+    <span class="years">{{data.year}}</span>
+    <span class="description">{{data.description}}</span>
+    <div class="btn-container" mat-dialog-actions>
+      <button *ngIf="!(bestMovie.getValue() == data.id)" (click)="setBestMovie(data.id)" mat-button color="primary">Выбрать лучшим фильмом</button>
+      <button *ngIf="bestMovie.getValue() == data.id" (click)="setBestMovie(data.id)" mat-button color="warn">Удалить из лучших фильмов</button>
+
+      <button mat-button color="warn" mat-button mat-dialog-close>Закрыть</button>
+    </div>
+  </div>
+</div>

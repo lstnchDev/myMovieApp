@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.container {
+  padding: 37px 25px 44px 25px;
+  background-color: #f4f4f4;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Montserrat";
+  h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  ul {
+    padding: 0;
+  }
+  .filter-container {
+    display: flex;
+    gap: 7px;
+    margin: 15px 0;
+  }
+  .movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #1d1838;
+    .movie-card {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      width: 190px;
+      height: 400px;
+      padding: 15px 20px;
+      background: #ffffff;
+      box-shadow: 0px 0px 15px rgba(29, 24, 56, 0.1);
+      border-radius: 10px;
+      position: relative;
+      box-sizing: border-box;
+
+      &:hover {
+        .movie-btn {
+          visibility: visible;
+        }
+      }
+      .movie-image {
+        width: 150px;
+        height: 225px;
+        border-radius: 5px;
+        margin: 0 auto;
+      }
+
+      .movie-title {
+        font-size: 14px;
+      }
+      .genres-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .movie-genre {
+        font-size: 12px;
+        white-space: pre-wrap;
+      }
+
+      .movie-year {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+
+      .movie-btn {
+        font-size: 20px;
+        cursor: pointer;
+        align-self: flex-end;
+        visibility: hidden;
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+      }
+    }
+  }
+}
